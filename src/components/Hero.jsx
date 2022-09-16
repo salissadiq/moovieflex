@@ -17,11 +17,11 @@ export default function Hero() {
     useEffect(()=> {
         const getMovies = async() => {
            const response = await axiosClient.get(`/movie/popular`)
-           setMovieItems(response.data.results.slice(1, 6))
+           setMovieItems(response.data.results.slice(0, 5))
         }
         getMovies()
     },[])
-    console.log(movieItems)
+
   return (
     <div className=''>
         <Swiper
@@ -29,8 +29,6 @@ export default function Hero() {
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             navigation
             pagination={{ clickable: true }}
-            onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)}
         >
             {movieItems.map((item, index) => (
                 <SwiperSlide key={index}>
@@ -46,7 +44,6 @@ const HeroSlideItem = props => {
     const {item} = props
     
     const background = apiConfig.originalImage(item.backdrop_path ? item.backdrop_path : item.poster_path)
-    console.log(background)
     return (
         <div style={{backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url(${background})`}} className='bg-center bg-no-repeat bg-cover h-[580px]'>
             <div className='flex h-full w-[600px] ml-64 relative  items-center'>

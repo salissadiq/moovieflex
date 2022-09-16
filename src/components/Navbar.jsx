@@ -3,7 +3,7 @@ import Logo from '../assets/Logo'
 export default function Navbar() {
   return (
     <nav className='inset-0 flex absolute  '>
-      <div className='mr-auto z-10 w-14 px-10 py-10 h-screen bg-gray-800 opacity-80'>
+      <div className='mr-auto z-10 w-14 px-10 py-10 h-[580px] bg-gray-800 opacity-80'>
         <ul className='py-5 flex flex-col items-center gap-20'>
           <li className='cursor-pointer'>
             <Logo />
