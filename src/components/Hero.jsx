@@ -23,7 +23,7 @@ export default function Hero() {
     },[])
 
   return (
-    <div className=''>
+    <div className='relative'>
         <Swiper
             slidesPerView={1}
             modules={[Navigation, Pagination, Scrollbar, A11y]}
