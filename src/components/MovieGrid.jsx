@@ -8,7 +8,7 @@ export default function MovieGrid(props) {
         const fetchMovies = async () => {
            const response = await axiosClient.get(`/movie/${props.type}`)
            console.log(response.data)
-           setMovies(response.data.results.slice(0, 19))
+           setMovies(response.data.results)
         }
         fetchMovies()
     }, [])
