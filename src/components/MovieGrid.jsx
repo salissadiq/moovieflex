@@ -11,7 +11,7 @@ export default function MovieGrid(props) {
            setMovies(response.data.results)
         }
         fetchMovies()
-    }, [])
+    }, [props.type])
   return (
     <div className='px-20 py-10 relative'>
         <p className='px-5 mb-5 text-lg text-white font-serif'>{props.title}  </p>

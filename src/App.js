@@ -7,8 +7,8 @@ function App() {
     <div>
       <Navbar />
       <Hero />
-      <MovieGrid title="Top rated movies" type="popular" />
-      <TvShowGrid />
+      <MovieGrid title="New releases" type="popular" />
+      <TvShowGrid title="Featured TV shows" type="popular" />
     </div>
   );
 }

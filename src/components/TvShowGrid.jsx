@@ -7,11 +7,11 @@ export default function TvShowGrid(props) {
 
     useEffect(() => {
         const fetchTvShows = async() => {
-            const response = await axiosClient.get(`/tv/popular`)
+            const response = await axiosClient.get(`/tv/${props.type}`)
             setTvShows(response.data.results)
         }
         fetchTvShows()
-    }, [])
+    }, [props.type])
     console.log(tvShows)
   return (
     <div className='px-20 py-10 relative'>

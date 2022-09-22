@@ -1,6 +1,5 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import apiConfig from '../utils/apiConfig'
-import axiosClient from '../utils/axiosClient'
 
 import Rating from './Rating'
 
